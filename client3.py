@@ -18,5 +18,12 @@ class StockDataProcessor:
             return "Undefined (division by zero)"
         else:
             return stock_A_price / stock_B_price
+    def main(self):
+        stock_A_info = self.getDataPoint(self.stock_A_data)
+        stock_B_info = self.getDataPoint(self.stock_B_data)
+        ratio = self.getRatio()
 
+        print(f"Stock A: {stock_A_info[0]} - Price: {stock_A_info[3]}")
+        print(f"Stock B: {stock_B_info[0]} - Price: {stock_B_info[3]}")
+        print(f"Price Ratio (A/B): {ratio}")
 
