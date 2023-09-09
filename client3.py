@@ -27,3 +27,10 @@ class StockDataProcessor:
         print(f"Stock B: {stock_B_info[0]} - Price: {stock_B_info[3]}")
         print(f"Price Ratio (A/B): {ratio}")
 
+
+# Example usage:
+stock_A_data = {'name': 'Stock A', 'bid_price': 100, 'ask_price': 105}
+stock_B_data = {'name': 'Stock B', 'bid_price': 80, 'ask_price': 85}
+
+processor = StockDataProcessor(stock_A_data, stock_B_data)
+processor.main()
