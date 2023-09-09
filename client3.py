@@ -10,4 +10,13 @@ class StockDataProcessor:
         price = (bid_price + ask_price) / 2
         return (stock_name, bid_price, ask_price, price)
 
+    def getRatio(self):
+        stock_A_price = self.getDataPoint(self.stock_A_data)[-1]
+        stock_B_price = self.getDataPoint(self.stock_B_data)[-1]
+
+        if stock_B_price == 0:
+            return "Undefined (division by zero)"
+        else:
+            return stock_A_price / stock_B_price
+
 
